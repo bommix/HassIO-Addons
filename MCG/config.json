@@ -6,12 +6,5 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "options": {
     "variable": ""
-  },
-  "schema": {
-    "variable": {
-      "description": "Geben Sie eine Variable ein",
-      "type": "str",
-      "required": true
-    }
   }
 }

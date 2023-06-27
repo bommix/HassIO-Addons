@@ -1,8 +1,8 @@
 {
-  "name": "Pyrser Add-on",
-  "version": "1.0",
+  "name": "MCG Vertretungsplan Parser Add-on",
+  "version": "1.0.1",
   "slug": "pyrser",
-  "description": "Startet das pyrser.py-Programm",
+  "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte klassen in einem Strinarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "options": {
     "variable": ""

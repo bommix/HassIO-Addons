@@ -1,0 +1,10 @@
+name: MCG Vertretungsplan Parser Add-on
+version: 1.0
+slug: pyrser
+description: Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte klassen in einem Strinarray darstellt.
+options:
+  variable: ""
+schema:
+  variable:
+    type: string
+    required: true

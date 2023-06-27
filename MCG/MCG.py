@@ -2,11 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import argparse
-from homeassistant.helpers.entity import Entity
+#from homeassistant.helpers.entity import Entity
 
 
-def setup_platform(hass, config, add_entities, discovery_info=None):
-    add_entities([MCGSensor()])
+#def setup_platform(hass, config, add_entities, discovery_info=None):
+#    add_entities([MCGSensor()])
 
 def split_output(output,max_output_lenght):
     if len(output) <= max_output_lenght:
@@ -54,21 +54,21 @@ def download(Klassen=[],url="",max_output_lenght=25):
 
 
 
-class MCGSensor(Entity):
-    def __init__(self):
-        self._state = None
-        self._name = "MCG-Vertretungsplan"
+#class MCGSensor(Entity):
+#    def __init__(self):
+#        self._state = None
+#        self._name = "MCG-Vertretungsplan"
 
-    @property
-    def name(self):
-        return self._name
+#    @property
+#    def name(self):
+#        return self._name
 
-    @property
-    def state(self):
-        return self._state
+#    @property
+#    def state(self):
+#        return self._state
 
-    def update(self):
-        self.state=main()
+#    def update(self):
+#        self.state=main()
 
 
 

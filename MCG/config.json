@@ -4,10 +4,17 @@
   "slug": "mcg",
   "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte Klassen in einem Stringarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "options": {
-    "Klassen": "", "URL": ""
-  },
-  "shema": {
-    "Klassen": string, "URL": string
+  "options": {},
+  "schema": {
+    "variable1": {
+      "description": "Description of variable 1",
+      "type": "string",
+      "default": "Default value"
+    },
+    "variable2": {
+      "description": "Description of variable 2",
+      "type": "boolean",
+      "default": false
+    }
   }
 }

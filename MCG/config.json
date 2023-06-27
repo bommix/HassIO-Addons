@@ -13,6 +13,5 @@
     "Klassen": "str?",
     "URL": "str??",
     "Updateintervall_in_Minuten": "int(0,)?"
-    }
   }
 }

@@ -11,7 +11,7 @@
   },
   "schema": {
     "Klassen": "str?",
-    "URL": "str??",
+    "URL": "str?",
     "Updateintervall_in_Minuten": "int(0,)?"
   }
 }

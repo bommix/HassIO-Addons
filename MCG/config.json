@@ -6,7 +6,7 @@
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "options": {
     "Klassen": "5d,7d",
-    "URL": 4,
+    "URL": "4d",
     "Updateintervall_in_Minuten": 30
   },
   "schema": {

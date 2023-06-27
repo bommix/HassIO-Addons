@@ -1,8 +1,8 @@
 {
-  "name": "MCG Vertretungsplan Parser Add-on",
-  "version": "1.0.1",
-  "slug": "MCG",
-  "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte klassen in einem Strinarray darstellt.",
+  "name": "mcg",
+  "version": "1.0.2",
+  "slug": "mcg",
+  "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte Klassen in einem Stringarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "options": {
     "variable": ""

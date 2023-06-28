@@ -1,6 +1,6 @@
 {
   "name": "mcg",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "slug": "mcg",
   "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte Klassen in einem Stringarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -19,10 +19,10 @@
     "URL": "str?",
     "Updateintervall_in_Minuten": "int(0,)?",
     "Maximale_Zeichenlänge": "int(0,)?",
-    "Debug": "bool?",
     "Token": "str?",
     "Host" : "str?",
     "Port" : "str?",
-    "Helfername" : "str?"
+    "Helfername" : "str?",
+    "Debug": "bool?"
   }
 }

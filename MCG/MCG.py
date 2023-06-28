@@ -127,9 +127,9 @@ def main():
         response = requests.post(url, data=json.dumps(data), headers=headers)
         if debug:
             if response.status_code == 200:
-                print(f"Daten erfolgreich an {input_text_entity} übergeben.")
+                print(f"Daten erfolgreich an {helfername} übergeben.")
             else:
-                print(f"Fehler beim Übergeben der Daten an {input_text_entity}.")
+                print(f"Fehler beim Übergeben der Daten an {helfername}.")
                 print("Antwort:", response.text)
         if debug:
             x=False  

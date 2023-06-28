@@ -106,7 +106,7 @@ def main():
     print("Starte Schleife")
     if debug:
         print("DEBUG OUTPUT")
-    while True:
+    #while True:
         out=download(Klassen,url,stringlen)
         print(debug)
         print("test")

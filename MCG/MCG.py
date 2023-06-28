@@ -98,6 +98,7 @@ def main():
     klassen = config_data['Klassen']
     url = config_data['URL']
     update_intervall = config_data['Updateintervall_in_Minuten']
+    stringlen = config_data['Maximale_Zeichenlänge']
 
     # Gebe die ausgelesenen Werte aus
     print("Klassen:", klassen)
@@ -114,8 +115,8 @@ def main():
     args = parser.parse_args()
 
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
-    Klassen = args.c.split(',')
-    return(download(Klassen,args.u,args.m))
+    Klassen = klassen.split(',')
+    return(download(Klassen,url,stringlen,update_intervall))
     
 
 

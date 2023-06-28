@@ -92,17 +92,20 @@ def main():
     #print("URL:", url)
     #print("Updateintervall_in_Minuten:", update_intervall)
     # Erstellen Sie einen ArgumentParser-Objekt
-    parser = argparse.ArgumentParser(description='Lesen Sie die Argumente ein')
+    #parser = argparse.ArgumentParser(description='Lesen Sie die Argumente ein')
 
     # Füge das Argument hinzu
-    parser.add_argument('-c', type=str, help='Eine durch Komma getrennte Liste von Werten', default='5d,7d')
-    parser.add_argument('-u', type=str, help='Die URL der Website', default='https://mcg-dresden.de/vertretung/')
-    parser.add_argument('-m', type=int, help='Max Output-Lenght', default=25)
+    #parser.add_argument('-c', type=str, help='Eine durch Komma getrennte Liste von Werten', default='5d,7d')
+    #parser.add_argument('-u', type=str, help='Die URL der Website', default='https://mcg-dresden.de/vertretung/')
+    #parser.add_argument('-m', type=int, help='Max Output-Lenght', default=25)
     # Parsen Sie die Argumente
-    args = parser.parse_args()
+    #args = parser.parse_args()
 
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
     Klassen = klassen.split(',')
+    print("Starte Schleife")
+    if debug:
+        print("DEBUG OUTPUT")
     while True:
         out=download(Klassen,url,stringlen)
         print(debug)

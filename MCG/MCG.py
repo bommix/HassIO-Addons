@@ -103,7 +103,7 @@ def main():
 
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
     Klassen = klassen.split(',')
-    while true:
+    while True:
         download(Klassen,url,stringlen)
         time.sleep(update_intervall*60)
 

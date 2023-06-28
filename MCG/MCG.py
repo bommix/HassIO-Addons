@@ -113,7 +113,7 @@ def main():
         if debug:
             print("DEBUG OUTPUT")
             print(out)
-        time.sleep(update_intervall*60)
+        #time.sleep(update_intervall*60)
 
 if __name__ == '__main__':
     main()

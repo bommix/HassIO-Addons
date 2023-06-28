@@ -105,7 +105,7 @@ def main():
     Klassen = klassen.split(',')
     if debug:
         print("Starte Schleife")
-    while True:
+    #while True:
         out=download(Klassen,url,stringlen)
         if debug:
             print("DEBUG OUTPUT")

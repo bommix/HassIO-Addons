@@ -105,6 +105,8 @@ def main():
     Klassen = klassen.split(',')
     while True:
         out=download(Klassen,url,stringlen)
+        print(debug)
+        print("test")
         if debug:
             print("DEBUG OUTPUT")
             print(out)

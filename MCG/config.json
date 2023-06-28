@@ -11,7 +11,7 @@
     "Maximale_Zeichenlänge": 25,
     "Token" : "abcde1234",
     "Host" : "http://localhost",
-    "Port" : "8123",ss
+    "Port" : "8123",
     "Helfername" : "input_text.stundenplan"
   },
   "schema": {

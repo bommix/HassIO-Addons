@@ -83,6 +83,12 @@ def main():
     # Ausgabe der Dateien
     for file in files:
         print(file)
+        if os.path.isfile(file):  # Überprüfen, ob es sich um eine Datei handelt
+            with open(file, 'r') as f:
+                content = f.read()
+                print(f"Inhalt von {file}:")
+                print(content)
+                print('-' * 30)
     # Lese die JSON-Datei ein
     with open('options.json', 'r') as f:
         print(f)

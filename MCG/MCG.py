@@ -86,7 +86,7 @@ def main():
     url = config_data['URL']
     update_intervall = config_data['Updateintervall_in_Minuten']
     stringlen = config_data['Maximale_Zeichenlänge']
-    debug = config_data['debug']
+    debug = config_data['Debug']
     # Gebe die ausgelesenen Werte aus
     #print("Klassen:", klassen)
     #print("URL:", url)

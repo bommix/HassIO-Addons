@@ -110,7 +110,8 @@ def main():
     Klassen = klassen.split(',')
     if debug:
         print("Starte Schleife")
-    while True:
+    x=True
+    while x:
         out=download(Klassen,url,stringlen)
         if debug:
             print("DEBUG OUTPUT")
@@ -130,7 +131,10 @@ def main():
             else:
                 print(f"Fehler beim Übergeben der Daten an {input_text_entity}.")
                 print("Antwort:", response.text)
-        time.sleep(update_intervall)
+        if debug:
+            x=False  
+        else:
+            time.sleep(update_intervall*60)
 
 if __name__ == '__main__':
     main()

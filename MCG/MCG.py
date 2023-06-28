@@ -133,7 +133,7 @@ def main():
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"
         }        
-        response = requests.post(url, data=json.dumps(data), headers=headers)
+        response = requests.post(apiurl, data=json.dumps(data), headers=headers)
 
         if debug:
             if response.status_code == 200:

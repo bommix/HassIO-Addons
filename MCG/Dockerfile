@@ -9,7 +9,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # MCG.py-Datei kopieren
-COPY MCG.py ./MCG.py
+COPY MCG.py /MCG.py
 
 # Laufzeitbefehl festlegen
-CMD [ "python", "./MCG.py" ]
+CMD [ "python", "/MCG.py" ]

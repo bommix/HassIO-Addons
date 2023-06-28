@@ -105,10 +105,10 @@ def main():
     Klassen = klassen.split(',')
     while True:
         out=download(Klassen,url,stringlen)
-        time.sleep(update_intervall*60)
         if debug:
             print("DEBUG OUTPUT")
             print(out)
+        time.sleep(update_intervall*60)
 
 if __name__ == '__main__':
     main()

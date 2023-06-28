@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 import argparse
 import json
+import os
 #from homeassistant.helpers.entity import Entity
 
 
@@ -75,6 +76,13 @@ def download(Klassen=[],url="",max_output_lenght=25):
 
 
 def main():
+    current_directory = os.getcwd()
+    # Liste aller Dateien im aktuellen Verzeichnis erstellen
+    files = os.listdir(current_directory)
+
+    # Ausgabe der Dateien
+    for file in files:
+        print(file)
     # Lese die JSON-Datei ein
     with open('options.json', 'r') as f:
         print(f)

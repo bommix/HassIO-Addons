@@ -8,13 +8,21 @@
     "Klassen": "5d,7d",
     "URL": "4d",
     "Updateintervall_in_Minuten": 30,
-    "Maximale_Zeichenlänge": 25
+    "Maximale_Zeichenlänge": 25,
+    "Token" : "abcde1234",
+    "Host" : "http://localhost",
+    "Port" : "8123",
+    "Helfername" : "input_text.stundenplan"
   },
   "schema": {
     "Klassen": "str?",
     "URL": "str?",
     "Updateintervall_in_Minuten": "int(0,)?",
     "Maximale_Zeichenlänge": "int(0,)?",
-    "Debug": "bool?"
+    "Debug": "bool?",
+    "Token": "str?",
+    "Host" : "str?",
+    "Port" : "str?",
+    "Helfername" : "str?"
   }
 }

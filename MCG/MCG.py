@@ -50,7 +50,7 @@ def download(Klassen=[],url="",max_output_lenght=25):
                 x=0
 
     # Gesammelte Informationen auf einer Zeile ausgeben
-    print(informationen_auf_einer_zeile)
+    #print(informationen_auf_einer_zeile)
     output=informationen_auf_einer_zeile.split("\n")
     return output
 
@@ -103,17 +103,14 @@ def main():
 
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
     Klassen = klassen.split(',')
-    print("Starte Schleife")
     if debug:
-        print("DEBUG OUTPUT")
-    #while True:
+        print("Starte Schleife")
+    while True:
         out=download(Klassen,url,stringlen)
-        print(debug)
-        print("test")
         if debug:
             print("DEBUG OUTPUT")
             print(out)
-        #time.sleep(update_intervall*60)
+        time.sleep(update_intervall)
 
 if __name__ == '__main__':
     main()

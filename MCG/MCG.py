@@ -120,7 +120,7 @@ def main():
             "value": out
         }
         headers = {
-            "Authorization": f"Bearer {access_token}",
+            "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"
         }
         response = requests.post(url, data=json.dumps(data), headers=headers)

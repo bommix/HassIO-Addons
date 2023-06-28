@@ -92,6 +92,7 @@ def main():
     helfername = config_data['Helfername']
     token = config_data['Token']
     apiurl = f"{host}:{port}/api/services/input_text/set_value"
+    apiurl = f"{host}:{port}/api/states/" + helfername
     # Gebe die ausgelesenen Werte aus
     #print("Klassen:", klassen)
     #print("URL:", url)
@@ -116,15 +117,24 @@ def main():
         if debug:
             print("DEBUG OUTPUT")
             print(out)
+        #data = {
+        #    "entity_id": helfername,
+        #    "value": out
+        #}
         data = {
-            "entity_id": helfername,
-            "value": out
+            "state": out
         }
+        #headers = {
+        #    "Authorization": f"Bearer {token}",
+        #    "Content-Type": "application/json"
+        #}
+        #response = requests.post(url, data=json.dumps(data), headers=headers)
         headers = {
-            "Authorization": f"Bearer {token}",
+            "Authorization": f"Bearer {access_token}",
             "Content-Type": "application/json"
-        }
+        }        
         response = requests.post(url, data=json.dumps(data), headers=headers)
+
         if debug:
             if response.status_code == 200:
                 print(f"Daten erfolgreich an {helfername} übergeben.")

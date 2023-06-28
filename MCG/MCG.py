@@ -92,7 +92,7 @@ def main():
     helfername = config_data['Helfername']
     token = config_data['Token']
     apiurl = f"{host}:{port}/api/services/input_text/set_value"
-    apiurl = f"{host}:{port}/api/states/" + helfername
+    #apiurl = f"{host}:{port}/api/states/" + helfername
     # Gebe die ausgelesenen Werte aus
     #print("Klassen:", klassen)
     #print("URL:", url)
@@ -117,18 +117,13 @@ def main():
         if debug:
             print("DEBUG OUTPUT")
             print(out)
-        #data = {
-        #    "entity_id": helfername,
-        #    "value": out
-        #}
         data = {
-            "state": out
+            "entity_id": helfername,
+            "value": out
         }
-        #headers = {
-        #    "Authorization": f"Bearer {token}",
-        #    "Content-Type": "application/json"
+        #data = {
+        #    "state": out
         #}
-        #response = requests.post(url, data=json.dumps(data), headers=headers)
         headers = {
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"

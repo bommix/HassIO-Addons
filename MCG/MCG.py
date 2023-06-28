@@ -77,7 +77,7 @@ def download(Klassen=[],url="",max_output_lenght=25):
 def main():
     # Lese die JSON-Datei ein
     with open('config.json', 'r') as f:
-    config_data = json.load(f)
+        config_data = json.load(f)
 
     # Lese die Werte aus der JSON-Datei
     klassen = config_data['options']['Klassen']

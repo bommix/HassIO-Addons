@@ -8,14 +8,13 @@
     "Klassen": "5d,7d",
     "URL": "4d",
     "Updateintervall_in_Minuten": 30,
-    "Maximale_Zeichenlänge": 25,
-    "Debug": false
+    "Maximale_Zeichenlänge": 25
   },
   "schema": {
     "Klassen": "str?",
     "URL": "str?",
     "Updateintervall_in_Minuten": "int(0,)?",
     "Maximale_Zeichenlänge": "int(0,)?",
-    "Debug": ""
+    "Debug": "bool?"
   }
 }

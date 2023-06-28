@@ -95,9 +95,9 @@ def main():
         config_data = json.load(f)
 
     # Lese die Werte aus der JSON-Datei
-    klassen = config_data['options']['Klassen']
-    url = config_data['options']['URL']
-    update_intervall = config_data['options']['Updateintervall_in_Minuten']
+    klassen = config_data['Klassen']
+    url = config_data['URL']
+    update_intervall = config_data['Updateintervall_in_Minuten']
 
     # Gebe die ausgelesenen Werte aus
     print("Klassen:", klassen)

@@ -86,7 +86,7 @@ def main():
     url = config_data['URL']
     update_intervall = config_data['Updateintervall_in_Minuten']
     stringlen = config_data['Maximale_Zeichenlänge']
-
+    debug = config_data['debug']
     # Gebe die ausgelesenen Werte aus
     #print("Klassen:", klassen)
     #print("URL:", url)
@@ -104,9 +104,9 @@ def main():
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
     Klassen = klassen.split(',')
     while True:
-        download(Klassen,url,stringlen)
+        print(download(Klassen,url,stringlen))
         time.sleep(update_intervall*60)
-
+        
 
 if __name__ == '__main__':
     main()

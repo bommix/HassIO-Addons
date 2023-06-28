@@ -107,6 +107,7 @@ def main():
         out=download(Klassen,url,stringlen)
         time.sleep(update_intervall*60)
         if debug:
+            print("DEBUG OUTPUT")
             print(out)
 
 if __name__ == '__main__':

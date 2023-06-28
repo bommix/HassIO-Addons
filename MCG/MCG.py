@@ -104,9 +104,10 @@ def main():
     # Teilen Sie die Werte durch das Komma und speichern Sie sie in einem Array
     Klassen = klassen.split(',')
     while True:
-        print(download(Klassen,url,stringlen))
+        out=download(Klassen,url,stringlen)
         time.sleep(update_intervall*60)
-        
+        if debug:
+            print(out)
 
 if __name__ == '__main__':
     main()

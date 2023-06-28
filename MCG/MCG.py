@@ -87,6 +87,11 @@ def main():
     update_intervall = config_data['Updateintervall_in_Minuten']
     stringlen = config_data['Maximale_Zeichenlänge']
     debug = config_data['Debug']
+    host = config_data['Host']
+    port = config_data['Port']
+    helfername = config_data['Helfername']
+    token = config_data['Token']
+    apiurl = f"{host}:{port}/api/services/input_text/set_value"
     # Gebe die ausgelesenen Werte aus
     #print("Klassen:", klassen)
     #print("URL:", url)
@@ -105,11 +110,26 @@ def main():
     Klassen = klassen.split(',')
     if debug:
         print("Starte Schleife")
-    #while True:
+    while True:
         out=download(Klassen,url,stringlen)
         if debug:
             print("DEBUG OUTPUT")
             print(out)
+        data = {
+            "entity_id": helfername,
+            "value": out
+        }
+        headers = {
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json"
+        }
+        response = requests.post(url, data=json.dumps(data), headers=headers)
+        if debug:
+            if response.status_code == 200:
+                print(f"Daten erfolgreich an {input_text_entity} übergeben.")
+            else:
+                print(f"Fehler beim Übergeben der Daten an {input_text_entity}.")
+                print("Antwort:", response.text)
         time.sleep(update_intervall)
 
 if __name__ == '__main__':

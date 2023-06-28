@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import datetime
 import argparse
+import json
 #from homeassistant.helpers.entity import Entity
 
 
@@ -74,6 +75,19 @@ def download(Klassen=[],url="",max_output_lenght=25):
 
 
 def main():
+    # Lese die JSON-Datei ein
+    with open('config.json', 'r') as f:
+    config_data = json.load(f)
+
+    # Lese die Werte aus der JSON-Datei
+    klassen = config_data['options']['Klassen']
+    url = config_data['options']['URL']
+    update_intervall = config_data['options']['Updateintervall_in_Minuten']
+
+    # Gebe die ausgelesenen Werte aus
+    print("Klassen:", klassen)
+    print("URL:", url)
+    print("Updateintervall_in_Minuten:", update_intervall)
     # Erstellen Sie einen ArgumentParser-Objekt
     parser = argparse.ArgumentParser(description='Lesen Sie die Argumente ein')
 

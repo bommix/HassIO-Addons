@@ -52,6 +52,8 @@ def download(Klassen=[],url="",max_output_lenght=25):
     # Gesammelte Informationen auf einer Zeile ausgeben
     #print(informationen_auf_einer_zeile)
     output=informationen_auf_einer_zeile.split("\n")
+    informationen_auf_einer_zeile = ' '.join(informationen_auf_einer_zeile.split())
+    informationen_auf_einer_zeile = informationen_auf_einer_zeile.replace("—", "-")
     return informationen_auf_einer_zeile
 
 

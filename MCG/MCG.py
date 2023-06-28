@@ -52,7 +52,7 @@ def download(Klassen=[],url="",max_output_lenght=25):
     # Gesammelte Informationen auf einer Zeile ausgeben
     #print(informationen_auf_einer_zeile)
     output=informationen_auf_einer_zeile.split("\n")
-    return output
+    return informationen_auf_einer_zeile
 
 
 

@@ -148,10 +148,11 @@ def main():
 
         if debug:
             if response.status_code == 200:
-                print(f"Daten erfolgreich  übergeben.")
+                print(f"Daten erfolgreich übergeben.")
             else:
-                print(f"Fehler beim Übergeben der Daten .")
+                print(f"Fehler beim Übergeben der Daten.")
                 print("Antwort:", response.text)
+                print("Daten:", data)
         if debug:
             x=False  
         else:

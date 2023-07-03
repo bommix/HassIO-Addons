@@ -53,7 +53,7 @@ def download(Klassen=[],url="",max_output_lenght=25):
     #print(informationen_auf_einer_zeile)
     
     informationen_auf_einer_zeile = ' '.join(informationen_auf_einer_zeile.split())
-    informationen_auf_einer_zeile = informationen_auf_einer_zeile.replace("—", "-").replace("ä","ae").replace("ö","oe").replace("ü","ue").replace("Ä","Ae").replace("Ö","Oe").replace("Ü","Ue").replace("ß","ss")
+    informationen_auf_einer_zeile = informationen_auf_einer_zeile.replace("–","-").replace("—","-").replace("ä","ae").replace("ö","oe").replace("ü","ue").replace("Ä","Ae").replace("Ö","Oe").replace("Ü","Ue").replace("ß","ss")
     output=informationen_auf_einer_zeile.split("\n")
     return output
 

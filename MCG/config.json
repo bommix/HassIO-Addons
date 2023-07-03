@@ -12,7 +12,14 @@
     "Token" : "abcde1234",
     "Host" : "http://localhost",
     "Port" : "8123",
-    "Helfername" : "input_text.stundenplan"
+    "Helfername" : "input_text.stundenplan",
+    "Helfername1" : "input_text.stundenplan",
+    "Helfername2" : "input_text.stundenplan",
+    "Helfername3" : "input_text.stundenplan",
+    "Helfername4" : "input_text.stundenplan",
+    "Helfername5" : "input_text.stundenplan",
+    "Helfername6" : "input_text.stundenplan",
+    "Helfername7" : "input_text.stundenplan"
   },
   "schema": {
     "Klassen": "str?",
@@ -23,6 +30,13 @@
     "Host" : "str?",
     "Port" : "str?",
     "Helfername" : "str?",
+    "Helfername1" : "str?",
+    "Helfername2" : "str?",
+    "Helfername3" : "str?",
+    "Helfername4" : "str?",
+    "Helfername5" : "str?",
+    "Helfername6" : "str?",
+    "Helfername7" : "str?",
     "Debug": "bool?"
   }
 }

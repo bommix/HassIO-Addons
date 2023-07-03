@@ -51,10 +51,11 @@ def download(Klassen=[],url="",max_output_lenght=25):
 
     # Gesammelte Informationen auf einer Zeile ausgeben
     #print(informationen_auf_einer_zeile)
-    output=informationen_auf_einer_zeile.split("\n")
+    
     informationen_auf_einer_zeile = ' '.join(informationen_auf_einer_zeile.split())
-    informationen_auf_einer_zeile = informationen_auf_einer_zeile.replace("—", "-")
-    return informationen_auf_einer_zeile
+    informationen_auf_einer_zeile = informationen_auf_einer_zeile.replace("—", "-").replace("ä","ae").replace("ö","oe").replace("ü","ue").replace("Ä","Ae").replace("Ö","Oe").replace("Ü","Ue").replace("ß","ss")
+    output=informationen_auf_einer_zeile.split("\n")
+    return output
 
 
 
@@ -91,7 +92,15 @@ def main():
     debug = config_data['Debug']
     host = config_data['Host']
     port = config_data['Port']
-    helfername = config_data['Helfername']
+    helfername=[]
+    helfername[0] = config_data['Helfername']
+    helfername[1] = config_data['Helfername1']
+    helfername[2] = config_data['Helfername2']
+    helfername[3] = config_data['Helfername3']
+    helfername[4] = config_data['Helfername4']
+    helfername[5] = config_data['Helfername5']
+    helfername[6] = config_data['Helfername6']
+    helfername[7] = config_data['Helfername7']
     token = config_data['Token']
     apiurl = f"{host}:{port}/api/services/input_text/set_value"
     #apiurl = f"{host}:{port}/api/states/" + helfername
@@ -116,32 +125,33 @@ def main():
     x=True
     while x:
         out=download(Klassen,url,stringlen)
-        if debug:
-            print("DEBUG OUTPUT")
-            print(out)
-        data = {
-            "entity_id": helfername,
-            "value": out
-        }
-        #data = {
-        #    "state": out
-        #}
-        headers = {
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json"
-        }        
-        response = requests.post(apiurl, data=json.dumps(data), headers=headers)
+        for element in out:
+            if debug:
+                print("DEBUG OUTPUT")
+                print(element)
+            data = {
+                "entity_id": helfername[out.index(element)],
+                "value": element
+            }
+            #data = {
+            #    "state": out
+            #}
+            headers = {
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json"
+            }        
+            response = requests.post(apiurl, data=json.dumps(data), headers=headers)
 
-        if debug:
-            if response.status_code == 200:
-                print(f"Daten erfolgreich an {helfername} übergeben.")
+            if debug:
+                if response.status_code == 200:
+                    print(f"Daten erfolgreich an {helfername} übergeben.")
+                else:
+                    print(f"Fehler beim Übergeben der Daten an {helfername}.")
+                    print("Antwort:", response.text)
+            if debug:
+                x=False  
             else:
-                print(f"Fehler beim Übergeben der Daten an {helfername}.")
-                print("Antwort:", response.text)
-        if debug:
-            x=False  
-        else:
-            time.sleep(update_intervall*60)
+                time.sleep(update_intervall*60)
 
 if __name__ == '__main__':
     main()

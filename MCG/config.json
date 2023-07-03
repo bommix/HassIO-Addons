@@ -1,6 +1,6 @@
 {
   "name": "mcg",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "slug": "mcg",
   "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte Klassen in einem Stringarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -13,13 +13,13 @@
     "Host" : "http://localhost",
     "Port" : "8123",
     "Helfername" : "input_text.stundenplan",
-    "Helfername1" : "input_text.stundenplan",
-    "Helfername2" : "input_text.stundenplan",
-    "Helfername3" : "input_text.stundenplan",
-    "Helfername4" : "input_text.stundenplan",
-    "Helfername5" : "input_text.stundenplan",
-    "Helfername6" : "input_text.stundenplan",
-    "Helfername7" : "input_text.stundenplan"
+    "Helfername1" : "input_text.stundenplan1",
+    "Helfername2" : "input_text.stundenplan2",
+    "Helfername3" : "input_text.stundenplan3",
+    "Helfername4" : "input_text.stundenplan4",
+    "Helfername5" : "input_text.stundenplan5",
+    "Helfername6" : "input_text.stundenplan6",
+    "Helfername7" : "input_text.stundenplan7"
   },
   "schema": {
     "Klassen": "str?",

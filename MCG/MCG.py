@@ -126,9 +126,11 @@ def main():
     while x:
         data=[]
         out=download(Klassen,url,stringlen)
+        print("Output:")
+        print(out)
         for element in out:
             if debug:
-                print("DEBUG OUTPUT")
+                print("DEBUG OUTPUT Element")
                 print(element)
             data1 = {
                 "entity_id": helfername[out.index(element)],

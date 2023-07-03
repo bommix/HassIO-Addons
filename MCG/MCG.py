@@ -124,34 +124,36 @@ def main():
         print("Starte Schleife")
     x=True
     while x:
+        data=[]
         out=download(Klassen,url,stringlen)
         for element in out:
             if debug:
                 print("DEBUG OUTPUT")
                 print(element)
-            data = {
+            data1 = {
                 "entity_id": helfername[out.index(element)],
                 "value": element
             }
-            #data = {
-            #    "state": out
-            #}
-            headers = {
-                "Authorization": f"Bearer {token}",
-                "Content-Type": "application/json"
-            }        
-            response = requests.post(apiurl, data=json.dumps(data), headers=headers)
+            data.append(data1)
+        #data = {
+        #    "state": out
+        #}
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }        
+        response = requests.post(apiurl, data=json.dumps(data), headers=headers)
 
-            if debug:
-                if response.status_code == 200:
-                    print(f"Daten erfolgreich an {helfername} übergeben.")
-                else:
-                    print(f"Fehler beim Übergeben der Daten an {helfername}.")
-                    print("Antwort:", response.text)
-            if debug:
-                x=False  
+        if debug:
+            if response.status_code == 200:
+                print(f"Daten erfolgreich an {helfername} übergeben.")
             else:
-                time.sleep(update_intervall*60)
+                print(f"Fehler beim Übergeben der Daten an {helfername}.")
+                print("Antwort:", response.text)
+        if debug:
+            x=False  
+        else:
+            time.sleep(update_intervall*60)
 
 if __name__ == '__main__':
     main()

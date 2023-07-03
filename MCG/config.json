@@ -1,6 +1,6 @@
 {
   "name": "mcg",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "slug": "mcg",
   "description": "Ein Skript welches den Vertretungsplan des MCG-Dresden für bestimmte Klassen in einem Stringarray darstellt.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],

@@ -93,14 +93,14 @@ def main():
     host = config_data['Host']
     port = config_data['Port']
     helfername=[]
-    helfername[0] = config_data['Helfername']
-    helfername[1] = config_data['Helfername1']
-    helfername[2] = config_data['Helfername2']
-    helfername[3] = config_data['Helfername3']
-    helfername[4] = config_data['Helfername4']
-    helfername[5] = config_data['Helfername5']
-    helfername[6] = config_data['Helfername6']
-    helfername[7] = config_data['Helfername7']
+    helfername.append(config_data['Helfername'])
+    helfername.append(config_data['Helfername1'])
+    helfername.append(config_data['Helfername2'])
+    helfername.append(config_data['Helfername3'])
+    helfername.append(config_data['Helfername4'])
+    helfername.append(config_data['Helfername5'])
+    helfername.append(config_data['Helfername6'])
+    helfername.append(config_data['Helfername7'])
     token = config_data['Token']
     apiurl = f"{host}:{port}/api/services/input_text/set_value"
     #apiurl = f"{host}:{port}/api/states/" + helfername

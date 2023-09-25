@@ -128,24 +128,29 @@ def main():
         out=download(Klassen,url,stringlen)
         print("Output:")
         print(out)
-        for element in out:
-            if debug:
-                print("DEBUG OUTPUT Element")
-                print(element)
-            data1 = {
-                "entity_id": helfername[out.index(element)],
-                "value": element
-            }
-            data.append(data1)
+        ENTITY_ID = 'input_text.stundenplan'
+        #for element in out:
+        #    if debug:
+        #        print("DEBUG OUTPUT Element")
+        #        print(element)
+        #    data1 = {
+        #        "entity_id": helfername[out.index(element)],
+        #        "value": element
+        #    }
+        #    data.append(data1)
         #data = {
         #    "state": out
         #}
         headers = {
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"
-        }        
-        response = requests.post(apiurl, data=json.dumps(data), headers=headers)
-
+        }   
+        data = {
+            "state": "hello worldd",  # Der gewünschte Zustand
+        }
+        response = requests.post(f'{HA_URL}/api/states/{ENTITY_ID}', headers=headers, json=data)
+        #response = requests.post(apiurl, data=data, headers=headers)
+        
         if debug:
             if response.status_code == 200:
                 print(f"Daten erfolgreich übergeben.")

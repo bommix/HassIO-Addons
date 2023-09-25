@@ -146,7 +146,7 @@ def main():
             "Content-Type": "application/json"
         }   
         data = {
-            "state": "hello worldd",  # Der gewünschte Zustand
+            "state": out,  # Der gewünschte Zustand
         }
         response = requests.post(f'{host}:{port}/api/states/{ENTITY_ID}', headers=headers, json=data)
         #response = requests.post(apiurl, data=data, headers=headers)

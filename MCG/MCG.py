@@ -148,7 +148,7 @@ def main():
         data = {
             "state": "hello worldd",  # Der gewünschte Zustand
         }
-        response = requests.post(f'{HA_URL}/api/states/{ENTITY_ID}', headers=headers, json=data)
+        response = requests.post(f'{host}:{port}/api/states/{ENTITY_ID}', headers=headers, json=data)
         #response = requests.post(apiurl, data=data, headers=headers)
         
         if debug:
